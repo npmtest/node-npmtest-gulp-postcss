@@ -1,7 +1,7 @@
 # test coverage for  [gulp-postcss (v6.4.0)](https://github.com/postcss/gulp-postcss)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-postcss.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-postcss) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-postcss.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-postcss)
 #### PostCSS gulp plugin
 
-[![NPM](https://nodei.co/npm/gulp-postcss.png?downloads=true)](https://www.npmjs.com/package/gulp-postcss)
+[![NPM](https://nodei.co/npm/gulp-postcss.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-postcss)
 
 | git-branch : | [alpha](https://github.com/npmtest/node-npmtest-gulp-postcss/tree/alpha)|
 |--:|:--|
@@ -9,11 +9,17 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-postcss/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-postcss/tree/gh-pages/build)|
 
-[![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-postcss/build/screenCapture.buildCustomOrg.browser.coverage.html.png)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html)
+- [https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html)
 
-[![test-report](https://npmtest.github.io/node-npmtest-gulp-postcss/build/screenCapture.buildCustomOrg.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmtest%252Fnode-npmtest-gulp-postcss%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html)
+[![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-postcss/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/screenCapture.buildApidoc.browser.%252Fhome%252Ftravis%252Fbuild%252Fnpmdoc%252Fnode-npmdoc-gulp-postcss%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/apidoc.html)
+- [https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html)
+
+[![test-report](https://npmtest.github.io/node-npmtest-gulp-postcss/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-postcss/build/apidoc.html)
 
 ![npmPackageListing](https://npmtest.github.io/node-npmtest-gulp-postcss/build/screenCapture.npmPackageListing.svg)
 
@@ -27,8 +33,7 @@
 
 {
     "author": {
-        "name": "Andrey Kuzmin",
-        "email": "unsoundscapes@gmail.com"
+        "name": "Andrey Kuzmin"
     },
     "bugs": {
         "url": "https://github.com/postcss/gulp-postcss/issues"
@@ -63,13 +68,11 @@
     "main": "index.js",
     "maintainers": [
         {
-            "name": "unsoundscapes",
-            "email": "unsoundscapes@gmail.com"
+            "name": "unsoundscapes"
         }
     ],
     "name": "gulp-postcss",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/postcss/gulp-postcss.git"
