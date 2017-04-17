@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-postcss/gulp-postcss/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-postcss/node_modules/gulp-postcss/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-postcss">npmtest-gulp-postcss (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-postcss/gulp-postcss/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-postcss/node_modules/gulp-postcss/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.38% <small>(10 / 65)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-postcss/gulp-postcss/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-postcss/node_modules/gulp-postcss/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -497,128 +499,128 @@ var gutil = require('gulp-util')
 var path = require('path')
 &nbsp;
 &nbsp;
-module.exports = withConfigLoader(<span class="fstat-no" title="function not covered">function (loadConfig) {</span>
+module.exports = withConfigLoader(<span class="fstat-no" title="function not covered" >function (loadConfig) {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var stream = new Stream.Transform({ objectMode: true })</span>
+<span class="cstat-no" title="statement not covered" >  var stream = new Stream.Transform({ objectMode: true })</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  stream._transform = <span class="fstat-no" title="function not covered">function (file, encoding, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >  stream._transform = <span class="fstat-no" title="function not covered" >function (file, encoding, cb) {</span></span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">      return cb(null, file)</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >      return cb(null, file)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered">      return handleError('Streams are not supported!')</span>
+<span class="cstat-no" title="statement not covered" >    if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered" >      return handleError('Streams are not supported!')</span>
     }
 &nbsp;
     // Protect `from` and `map` if using gulp-sourcemaps
-<span class="cstat-no" title="statement not covered">    var isProtected = file.sourceMap</span>
+<span class="cstat-no" title="statement not covered" >    var isProtected = file.sourceMap</span>
       ? { from: true, map: true }
       : {}
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var options = {</span>
+<span class="cstat-no" title="statement not covered" >    var options = {</span>
       from: file.path
     , to: file.path
       // Generate a separate source map for gulp-sourcemaps
     , map: file.sourceMap ? { annotation: false } : false
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    loadConfig(file)</span>
-      .then(<span class="fstat-no" title="function not covered">function (config) {</span>
-<span class="cstat-no" title="statement not covered">        var configOpts = config.options || {}</span>
+<span class="cstat-no" title="statement not covered" >    loadConfig(file)</span>
+      .then(<span class="fstat-no" title="function not covered" >function (config) {</span>
+<span class="cstat-no" title="statement not covered" >        var configOpts = config.options || {}</span>
         // Extend the default options if not protected
-<span class="cstat-no" title="statement not covered">        for (var opt in configOpts) {</span>
-<span class="cstat-no" title="statement not covered">          if (configOpts.hasOwnProperty(opt) &amp;&amp; !isProtected[opt]) {</span>
-<span class="cstat-no" title="statement not covered">            options[opt] = configOpts[opt]</span>
+<span class="cstat-no" title="statement not covered" >        for (var opt in configOpts) {</span>
+<span class="cstat-no" title="statement not covered" >          if (configOpts.hasOwnProperty(opt) &amp;&amp; !isProtected[opt]) {</span>
+<span class="cstat-no" title="statement not covered" >            options[opt] = configOpts[opt]</span>
           } else {
-<span class="cstat-no" title="statement not covered">            gutil.log(</span>
+<span class="cstat-no" title="statement not covered" >            gutil.log(</span>
               'gulp-postcss:',
               file.relative + '\nCannot override ' + opt +
               ' option, because it is required by gulp-sourcemaps'
             )
           }
         }
-<span class="cstat-no" title="statement not covered">        return postcss(config.plugins || [])</span>
+<span class="cstat-no" title="statement not covered" >        return postcss(config.plugins || [])</span>
           .process(file.contents, options)
       })
       .then(handleResult, handleError)
 &nbsp;
-<span class="fstat-no" title="function not covered">    function handleResult (result) {</span>
-<span class="cstat-no" title="statement not covered">      var map</span>
-<span class="cstat-no" title="statement not covered">      var warnings = result.warnings().join('\n')</span>
+<span class="fstat-no" title="function not covered" >    function handleResult (result) {</span>
+<span class="cstat-no" title="statement not covered" >      var map</span>
+<span class="cstat-no" title="statement not covered" >      var warnings = result.warnings().join('\n')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">      file.contents = new Buffer(result.css)</span>
+<span class="cstat-no" title="statement not covered" >      file.contents = new Buffer(result.css)</span>
 &nbsp;
       // Apply source map to the chain
-<span class="cstat-no" title="statement not covered">      if (file.sourceMap) {</span>
-<span class="cstat-no" title="statement not covered">        map = result.map.toJSON()</span>
-<span class="cstat-no" title="statement not covered">        map.file = file.relative</span>
-<span class="cstat-no" title="statement not covered">        map.sources = [].map.call(map.sources, <span class="fstat-no" title="function not covered">function (source) {</span></span>
-<span class="cstat-no" title="statement not covered">          return path.join(path.dirname(file.relative), source)</span>
+<span class="cstat-no" title="statement not covered" >      if (file.sourceMap) {</span>
+<span class="cstat-no" title="statement not covered" >        map = result.map.toJSON()</span>
+<span class="cstat-no" title="statement not covered" >        map.file = file.relative</span>
+<span class="cstat-no" title="statement not covered" >        map.sources = [].map.call(map.sources, <span class="fstat-no" title="function not covered" >function (source) {</span></span>
+<span class="cstat-no" title="statement not covered" >          return path.join(path.dirname(file.relative), source)</span>
         })
-<span class="cstat-no" title="statement not covered">        applySourceMap(file, map)</span>
+<span class="cstat-no" title="statement not covered" >        applySourceMap(file, map)</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      if (warnings) {</span>
-<span class="cstat-no" title="statement not covered">        gutil.log('gulp-postcss:', file.relative + '\n' + warnings)</span>
+<span class="cstat-no" title="statement not covered" >      if (warnings) {</span>
+<span class="cstat-no" title="statement not covered" >        gutil.log('gulp-postcss:', file.relative + '\n' + warnings)</span>
       }
 &nbsp;
-<span class="cstat-no" title="statement not covered">      setImmediate(<span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        cb(null, file)</span>
+<span class="cstat-no" title="statement not covered" >      setImmediate(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        cb(null, file)</span>
       })
     }
 &nbsp;
-<span class="fstat-no" title="function not covered">    function handleError (error) {</span>
-<span class="cstat-no" title="statement not covered">      var errorOptions = { fileName: file.path, showStack: true }</span>
-<span class="cstat-no" title="statement not covered">      if (error.name === 'CssSyntaxError') {</span>
-<span class="cstat-no" title="statement not covered">        errorOptions.error = error</span>
-<span class="cstat-no" title="statement not covered">        errorOptions.fileName = error.file || file.path</span>
-<span class="cstat-no" title="statement not covered">        errorOptions.lineNumber = error.line</span>
-<span class="cstat-no" title="statement not covered">        errorOptions.showProperties = false</span>
-<span class="cstat-no" title="statement not covered">        errorOptions.showStack = false</span>
-<span class="cstat-no" title="statement not covered">        error = error.message + '\n\n' + error.showSourceCode() + '\n'</span>
+<span class="fstat-no" title="function not covered" >    function handleError (error) {</span>
+<span class="cstat-no" title="statement not covered" >      var errorOptions = { fileName: file.path, showStack: true }</span>
+<span class="cstat-no" title="statement not covered" >      if (error.name === 'CssSyntaxError') {</span>
+<span class="cstat-no" title="statement not covered" >        errorOptions.error = error</span>
+<span class="cstat-no" title="statement not covered" >        errorOptions.fileName = error.file || file.path</span>
+<span class="cstat-no" title="statement not covered" >        errorOptions.lineNumber = error.line</span>
+<span class="cstat-no" title="statement not covered" >        errorOptions.showProperties = false</span>
+<span class="cstat-no" title="statement not covered" >        errorOptions.showStack = false</span>
+<span class="cstat-no" title="statement not covered" >        error = error.message + '\n\n' + error.showSourceCode() + '\n'</span>
       }
       // Prevent stream’s unhandled exception from
       // being suppressed by Promise
-<span class="cstat-no" title="statement not covered">      setImmediate(<span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        cb(new gutil.PluginError('gulp-postcss', error, errorOptions))</span>
+<span class="cstat-no" title="statement not covered" >      setImmediate(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        cb(new gutil.PluginError('gulp-postcss', error, errorOptions))</span>
       })
     }
 &nbsp;
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return stream</span>
+<span class="cstat-no" title="statement not covered" >  return stream</span>
 })
 &nbsp;
 &nbsp;
 function withConfigLoader(cb) {
-  return <span class="fstat-no" title="function not covered">function (plugins, options) {</span>
-<span class="cstat-no" title="statement not covered">    if (Array.isArray(plugins)) {</span>
-<span class="cstat-no" title="statement not covered">      return cb(<span class="fstat-no" title="function not covered">function () {</span></span>
-<span class="cstat-no" title="statement not covered">        return Promise.resolve({</span>
+  return <span class="fstat-no" title="function not covered" >function (plugins, options) {</span>
+<span class="cstat-no" title="statement not covered" >    if (Array.isArray(plugins)) {</span>
+<span class="cstat-no" title="statement not covered" >      return cb(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        return Promise.resolve({</span>
           plugins: plugins
         , options: options
         })
       })
-    } else <span class="cstat-no" title="statement not covered">if (typeof plugins === 'function') {</span>
-<span class="cstat-no" title="statement not covered">      return cb(<span class="fstat-no" title="function not covered">function (file) {</span></span>
-<span class="cstat-no" title="statement not covered">        return Promise.resolve(plugins(file))</span>
+    } else <span class="cstat-no" title="statement not covered" >if (typeof plugins === 'function') {</span>
+<span class="cstat-no" title="statement not covered" >      return cb(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return Promise.resolve(plugins(file))</span>
       })
     } else {
-<span class="cstat-no" title="statement not covered">      var postcssLoadConfig = require('postcss-load-config')</span>
-<span class="cstat-no" title="statement not covered">      var contextOptions = plugins || {}</span>
-<span class="cstat-no" title="statement not covered">      return cb(<span class="fstat-no" title="function not covered">function(file) {</span></span>
-<span class="cstat-no" title="statement not covered">        var configPath</span>
-<span class="cstat-no" title="statement not covered">        if (contextOptions.config) {</span>
-<span class="cstat-no" title="statement not covered">          if (path.isAbsolute(contextOptions.config)) {</span>
-<span class="cstat-no" title="statement not covered">            configPath = contextOptions.config</span>
+<span class="cstat-no" title="statement not covered" >      var postcssLoadConfig = require('postcss-load-config')</span>
+<span class="cstat-no" title="statement not covered" >      var contextOptions = plugins || {}</span>
+<span class="cstat-no" title="statement not covered" >      return cb(<span class="fstat-no" title="function not covered" >function(file) {</span></span>
+<span class="cstat-no" title="statement not covered" >        var configPath</span>
+<span class="cstat-no" title="statement not covered" >        if (contextOptions.config) {</span>
+<span class="cstat-no" title="statement not covered" >          if (path.isAbsolute(contextOptions.config)) {</span>
+<span class="cstat-no" title="statement not covered" >            configPath = contextOptions.config</span>
           } else {
-<span class="cstat-no" title="statement not covered">            configPath = path.join(file.base, contextOptions.config)</span>
+<span class="cstat-no" title="statement not covered" >            configPath = path.join(file.base, contextOptions.config)</span>
           }
         } else {
-<span class="cstat-no" title="statement not covered">          configPath = file.dirname</span>
+<span class="cstat-no" title="statement not covered" >          configPath = file.dirname</span>
         }
-<span class="cstat-no" title="statement not covered">        return postcssLoadConfig(</span>
+<span class="cstat-no" title="statement not covered" >        return postcssLoadConfig(</span>
           { file: file
           , options: contextOptions
           },
@@ -630,11 +632,10 @@ function withConfigLoader(cb) {
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 12:00:00 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Mon Apr 17 2017 11:01:25 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
