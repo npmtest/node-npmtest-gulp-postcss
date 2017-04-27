@@ -1,6 +1,6 @@
 # npmtest-gulp-postcss
 
-#### test coverage for  [gulp-postcss (v6.4.0)](https://github.com/postcss/gulp-postcss)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-postcss.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-postcss) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-postcss.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-postcss)
+#### basic test coverage for  [gulp-postcss (v6.4.0)](https://github.com/postcss/gulp-postcss)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-postcss.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-postcss) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-postcss.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-postcss)
 
 #### PostCSS gulp plugin
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-postcss/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-postcss/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-postcss/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-postcss/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-postcss/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-postcss/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-postcss/build/coverage.html/index.html)
 
@@ -83,7 +83,8 @@
     "scripts": {
         "test": "mocha test.js"
     },
-    "version": "6.4.0"
+    "version": "6.4.0",
+    "bin": {}
 }
 ```
 
